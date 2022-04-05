@@ -1,0 +1,75 @@
+CREATE TABLE Singers (
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+artist_name TEXT,
+lead_real_name TEXT);
+
+INSERT INTO Singers (artist_name, lead_real_name) VALUES ("Sia", "Sia Kate Isobelle Furler");
+INSERT INTO Singers (artist_name, lead_real_name) VALUES ("Duffy", "Aimee Anne Duffy");
+INSERT INTO Singers (artist_name, lead_real_name) VALUES ("Drake", "Aubrey Drake Graham");
+INSERT INTO Singers (artist_name, lead_real_name) VALUES ("Alice Cooper", "Vincent Damon Furnier");
+INSERT INTO Singers (artist_name, lead_real_name) VALUES ("Roxette", "Marie Fredriksson");
+INSERT INTO Singers (artist_name, lead_real_name) VALUES ("Bat For Lashes", "Natasha Khan");
+INSERT INTO Singers (artist_name, lead_real_name) VALUES ("Billy Idol", "William Michael Albert Broad");
+INSERT INTO Singers (artist_name, lead_real_name) VALUES ("Seal", "Henry Olusegun Adeola Samuel");
+INSERT INTO Singers (artist_name, lead_real_name) VALUES ("Tones And I", "Toni Watson");
+INSERT INTO Singers (artist_name, lead_real_name) VALUES ("Tina Turner", "Anna Mae Bullock");
+INSERT INTO Singers (artist_name, lead_real_name) VALUES ("Siouxsie", "Susan Janet Ballion");
+INSERT INTO Singers (artist_name, lead_real_name) VALUES ("David Bowie", "David Robert Jones");
+INSERT INTO Singers (artist_name, lead_real_name) VALUES ("Savage", "Roberto Zanetti");
+INSERT INTO Singers (artist_name, lead_real_name) VALUES ("Babyface", "Kenneth Brian Edmonds");
+INSERT INTO Singers (artist_name, lead_real_name) VALUES ("Mo", "Karen Marie Aagaard Orsted Andersen");
+INSERT INTO Singers (artist_name, lead_real_name) VALUES ("the Weeknd", "Able Makkonen Tesfaye");
+INSERT INTO Singers (artist_name, lead_real_name) VALUES ("Miley Cyrus", "Destiny Hope Cyrus");
+
+CREATE TABLE songs (
+    id INTEGER PRIMARY KEY AUTOINCREMENT, 
+    artist_id INTEGER,
+    title TEXT,
+    album TEXT,
+    release_year INTEGER); 
+
+INSERT INTO songs (artist_id, title, album, release_year) 
+   VALUES (1, "Thinderclouds", "LSD", 2019);
+INSERT INTO songs (artist_id, title, album, release_year) 
+   VALUES (2, "Distant Dreamer", "Rockferry", 2008);
+INSERT INTO songs (artist_id, title, album, release_year) 
+   VALUES (3, "Hold On, We're Going Home", "Nothing was the Same", 2013);
+INSERT INTO songs (artist_id, title, album, release_year) 
+   VALUES (4, "Feed My Frankenstein", "Hey Stoopid", 1991);
+INSERT INTO songs (artist_id, title, album, release_year) 
+   VALUES (5, "Fading Like a Flower", "Joyride", 1991);
+INSERT INTO songs (artist_id, title, album, release_year) 
+   VALUES (6, "Let's Get Lost", "Let's Get Lost", 2012);
+INSERT INTO songs (artist_id, title, album, release_year) 
+   VALUES (7, "Cradle of Love", "Charmed Life", 1990);
+INSERT INTO songs (artist_id, title, album, release_year) 
+   VALUES (8, "Kiss From a Rose", "Seal", 1994);
+INSERT INTO songs (artist_id, title, album, release_year) 
+   VALUES (9, "Fly Away", "Fly Away", 2020);
+INSERT INTO songs (artist_id, title, album, release_year) 
+   VALUES (10, "What's Love Got to Do With IT", "Private Dancer", 1984);
+INSERT INTO songs (artist_id, title, album, release_year) 
+   VALUES (11, "Kiss Them for Me", "Superstition", 1991);
+INSERT INTO songs (artist_id, title, album, release_year) 
+   VALUES (12, "As The World Falls Down", "Labyrinth", 1986);
+INSERT INTO songs (artist_id, title, album, release_year) 
+   VALUES (13, "A Love Again", "Tonight", 1984);
+INSERT INTO songs (artist_id, title, album, release_year) 
+   VALUES (14, "Whip Appeal", "Tender Lover", 1989);
+INSERT INTO songs (artist_id, title, album, release_year) 
+   VALUES (15, "Lean On", "Peace is the Mission", 2015);
+INSERT INTO songs (artist_id, title, album, release_year) 
+   VALUES (16, "Blinding Lights", "After Hours", 2020);
+INSERT INTO songs (artist_id, title, album, release_year) 
+   VALUES (17, "Slide Away", "Miley Cyrus", 2019);
+
+SELECT * FROM Singers;
+
+SELECT artist_name, title
+   FROM Singers, songs
+   WHERE Singers.id = songs.artist_id;
+   
+  
+SELECT lead_real_name, album, release_year FROM Singers
+    JOIN songs
+    ON songs.id = Singers.id;
