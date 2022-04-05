@@ -1,0 +1,18 @@
+CREATE TABLE pigment (id INTEGER PRIMARY KEY, color TEXT, quantity INTEGER, price INTEGER, in_season INTEGER);
+INSERT INTO pigment VALUES (1, "Red", 70, 5, "yes");
+INSERT INTO pigment VALUES(2, "Orange", 35, 5, "yes");
+INSERT INTO pigment VALUES(3, "Yellow", 90, 5, "yes");
+INSERT INTO pigment VALUES(4, "Green", 45, 5, "yes");
+INSERT INTO pigment VALUES(5, "Blue", 75, 5, "yes");
+INSERT INTO pigment VALUES(6, "Purple", 25, 5, "yes");
+INSERT INTO pigment VALUES (7, "Brown", 40, 7, "yes");
+INSERT INTO pigment VALUES (8, "Grey", 40, 6, "yes");
+INSERT INTO pigment VALUES (9, "White", 80, 8, "yes");
+INSERT INTO pigment VALUES (10, "Black", 75, 8, "yes");
+INSERT INTO pigment VALUES (11, "Pink", 35, 7, "yes");
+INSERT INTO pigment VALUES (12, "Teal", 25, 5, "yes");
+INSERT INTO pigment VALUES (13, "Lime", 25, 5, "yes");
+INSERT INTO pigment VALUES (14, "Periwinkle", 40, 8, "yes");
+INSERT INTO pigment VALUES (15, "Magenta", 40, 8, "yes");
+SELECT * FROM pigment
+order by price;
